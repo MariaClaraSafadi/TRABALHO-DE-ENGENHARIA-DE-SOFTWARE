@@ -1,0 +1,15 @@
+Integrante,Tarefa,Sprint,Justificativa
+Anthony,Cadastro de usuário,Sprint 1,Interessado em autenticação e integração frontend-backend.
+Anthony,Login de usuário,Sprint 1,Interessado em autenticação e integração frontend-backend.
+Anthony,Integração frontend + backend via fetch,Sprint 3,Interessado em autenticação e integração frontend-backend.
+Emmanuel,Integração com JWT,Sprint 1,Tem curiosidade em segurança e uso de APIs externas.
+Emmanuel,Sugestão de tarefas com base em clima,Sprint 3,Tem curiosidade em segurança e uso de APIs externas.
+Leonardo,Estrutura inicial da API (FastAPI/Express),Sprint 1,Prefere organização técnica e gosta de trabalhar com frontend e documentação.
+Leonardo,Interface Web (HTML/CSS/JS),Sprint 3,Prefere organização técnica e gosta de trabalhar com frontend e documentação.
+Leonardo,Documentação da API,Sprint 4,Prefere organização técnica e gosta de trabalhar com frontend e documentação.
+Maria Clara,Criar tarefa,Sprint 2,Gosta de lógica de programação e validação de dados.
+Maria Clara,Listar tarefas,Sprint 2,Gosta de lógica de programação e validação de dados.
+Maria Clara,Validação de dados,Sprint 4,Gosta de lógica de programação e validação de dados.
+Rocalho,Editar tarefa,Sprint 2,Tem afinidade com rotas REST e tarefas de atualização de dados.
+Rocalho,Excluir tarefa,Sprint 2,Tem afinidade com rotas REST e tarefas de atualização de dados.
+Todos,Testes manuais e revisão final,Sprint 4,Participação coletiva para garantir a qualidade final do projeto.
