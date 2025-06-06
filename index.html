@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Task - Gerenciamento de Tarefas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="text-white p-4 m-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">My Task</h1>
+            <nav>
+                <a href="#dashboard" class="mr-4 hover:underline">Dashboard</a>
+                <a href="#tasks" class="mr-4 hover:underline">Tarefas</a>
+                <a href="#profile" class="hover:underline">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6">
+        <section id="dashboard" class="mb-8">
+            <h2 class="text-xl font-semibold mb-4 text-black">Bem-vindo ao My Task</h2>
+            <p class="text-gray-700">Gerencie tarefas entre chefe e funcionário de forma simples e eficiente.</p>
+        </section>
+
+        <section id="tasks">
+            <h2 class="text-xl font-semibold mb-4 text-black">Tarefas</h2>
+            <div class="flex justify-between mb-4">
+                <button id="addTaskBtn" class="text-white px-4 py-2">Adicionar Tarefa</button>
+                <select id="filterTasks" class="border p-2">
+                    <option value="all">Todas</option>
+                    <option value="pending">Pendentes</option>
+                    <option value="completed">Concluídas</option>
+                </select>
+            </div>
+
+            <div id="taskList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="task-card p-4 shadow">
+                    <h3 class="font-bold">Reunião com Cliente</h3>
+                    <p>Responsável: João Silva</p>
+                    <p>Prazo: 10/06/2025</p>
+                    <p>Status: Pendente</p>
+                    <button class="text-white px-2 py-1 mt-2 mark-complete">Marcar como Concluída</button>
+                </div>
+                <div class="task-card p-4 shadow">
+                    <h3 class="font-bold">Relatório Mensal</h3>
+                    <p>Responsável: Maria Oliveira</p>
+                    <p>Prazo: 15/06/2025</p>
+                    <p>Status: Pendente</p>
+                    <button class="text-white px-2 py-1 mt-2 mark-complete">Marcar como Concluída</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="taskModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+            <div class="p-6 shadow-lg w-full max-w-md">
+                <h3 class="text-lg font-semibold mb-4">Adicionar Nova Tarefa</h3>
+                <form id="taskForm">
+                    <div class="mb-4">
+                        <label for="taskName" class="block">Nome da Tarefa</label>
+                        <input type="text" id="taskName" class="w-full p-2" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="taskResponsible" class="block">Responsável</label>
+                        <select id="taskResponsible" class="w-full p-2" required>
+                            <option value="">Selecione</option>
+                            <option value="João Silva">João Silva</option>
+                            <option value="Maria Oliveira">Maria Oliveira</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="taskDeadline" class="block">Prazo</label>
+                        <input type="date" id="taskDeadline" class="w-full p-2" required>
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="button" id="cancelTask" class="text-white px-4 py-2 mr-2">Cancelar</button>
+                        <button type="submit" class="text-white px-4 py-2">Adicionar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-white p-4 m-4 text-center">
+        <p>© 2025 My Task. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Task - Gerenciamento de Tarefas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="text-white p-4 m-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">My Task</h1>
+            <nav>
+                <a href="#dashboard" class="mr-4 hover:underline">Dashboard</a>
+                <a href="#tasks" class="mr-4 hover:underline">Tarefas</a>
+                <a href="#profile" class="hover:underline">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6">
+        <section id="dashboard" class="mb-8">
+            <h2 class="text-xl font-semibold mb-4 text-black">Bem-vindo ao My Task</h2>
+            <p class="text-gray-700">Gerencie tarefas entre chefe e funcionário de forma simples e eficiente.</p>
+        </section>
+
+        <section id="tasks">
+            <h2 class="text-xl font-semibold mb-4 text-black">Tarefas</h2>
+            <div class="flex justify-between mb-4">
+                <button id="addTaskBtn" class="text-white px-4 py-2">Adicionar Tarefa</button>
+                <select id="filterTasks" class="border p-2">
+                    <option value="all">Todas</option>
+                    <option value="pending">Pendentes</option>
+                    <option value="completed">Concluídas</option>
+                </select>
+            </div>
+
+            <div id="taskList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="task-card p-4 shadow">
+                    <h3 class="font-bold">Reunião com Cliente</h3>
+                    <p>Responsável: João Silva</p>
+                    <p>Prazo: 10/06/2025</p>
+                    <p>Status: Pendente</p>
+                    <button class="text-white px-2 py-1 mt-2 mark-complete">Marcar como Concluída</button>
+                </div>
+                <div class="task-card p-4 shadow">
+                    <h3 class="font-bold">Relatório Mensal</h3>
+                    <p>Responsável: Maria Oliveira</p>
+                    <p>Prazo: 15/06/2025</p>
+                    <p>Status: Pendente</p>
+                    <button class="text-white px-2 py-1 mt-2 mark-complete">Marcar como Concluída</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="taskModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+            <div class="p-6 shadow-lg w-full max-w-md">
+                <h3 class="text-lg font-semibold mb-4">Adicionar Nova Tarefa</h3>
+                <form id="taskForm">
+                    <div class="mb-4">
+                        <label for="taskName" class="block">Nome da Tarefa</label>
+                        <input type="text" id="taskName" class="w-full p-2" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="taskResponsible" class="block">Responsável</label>
+                        <select id="taskResponsible" class="w-full p-2" required>
+                            <option value="">Selecione</option>
+                            <option value="João Silva">João Silva</option>
+                            <option value="Maria Oliveira">Maria Oliveira</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="taskDeadline" class="block">Prazo</label>
+                        <input type="date" id="taskDeadline" class="w-full p-2" required>
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="button" id="cancelTask" class="text-white px-4 py-2 mr-2">Cancelar</button>
+                        <button type="submit" class="text-white px-4 py-2">Adicionar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-white p-4 m-4 text-center">
+        <p>© 2025 My Task. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
